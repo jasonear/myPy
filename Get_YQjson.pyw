@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-# -*- coding:utf-8 -*-
-
-=======
->>>>>>> 08f4499315c9f9a71cede7b77f3a3fb599301cf0
 import requests
 import os
 import time
 import schedule
 
-<<<<<<< HEAD
-desktop_path = '.\\data\\'  # 新创建的txt文件的存放路径
-=======
-desktop_path = ".\\data\\"  # 新创建的txt文件的存放路径
->>>>>>> 08f4499315c9f9a71cede7b77f3a3fb599301cf0
+desktop_path = "D:\\00_jason\\0_data\\"  # 新创建的txt文件的存放路径
 
 def text_create(desktop_path,name, msg):
     full_path = desktop_path + name + '.json'  # 也可以创建一个.doc的word文档
@@ -22,7 +13,7 @@ def text_create(desktop_path,name, msg):
 
 
 def job(req_url,f_name):
-    r = requests.get('https://{0}'.format(req_url))
+    r=requests.get('https://{0}'.format(req_url))
     filename = f_name +'_'+ time.strftime('%Y-%m-%d_%H%M%S')
     print('{1} r.status_code: {0}'.format(r.status_code,filename))
     text_create(desktop_path, filename, r.text)
@@ -31,7 +22,7 @@ def job(req_url,f_name):
 
 def dojob():
     job('ncov-cdn.sndo.com/getNcov.djson','getNcov')
-    job('ncov-cdn.sndo.com/quarantine/getQuarantineAll.djson','getQuarantineAll')
+    #job('ncov-cdn.sndo.com/quarantine/getQuarantineAll.djson','getQuarantineAll')
 
 
 schedule.every(5).seconds.do(dojob) # 每10秒执行一次
@@ -39,12 +30,9 @@ schedule.every(5).seconds.do(dojob) # 每10秒执行一次
 while True:
     schedule.run_pending()
     time.sleep(1)
-<<<<<<< HEAD
-=======
 
 
 
 
  
 
->>>>>>> 08f4499315c9f9a71cede7b77f3a3fb599301cf0
