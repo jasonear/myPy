@@ -25,7 +25,16 @@ def dojob():
     job('ncov-cdn.sndo.com/quarantine/getQuarantineAll.djson','getQuarantineAll')
 
 
+def dojob_hour():.
+    job('whhb.tgovcloud.com/epidemicbg/lbsFlow/chart','PFlow')
+
+
 schedule.every(5).seconds.do(dojob) # 每10秒执行一次
+schedule.every().hour.at(":16").do(dojob_hour)
+
+# schedule.every().day.at("10:30").do(job)
+#schedule.every().hour.do(dojob_hour)
+# schedule.every().minute.at(":17").do(job)
 
 while True:
     schedule.run_pending()
