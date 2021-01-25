@@ -25,7 +25,7 @@ def dojob():
     job('ncov-cdn.sndo.com/quarantine/getQuarantineAll.djson','getQuarantineAll')
 
 
-def dojob_hour():.
+def dojob_hour():
     job('whhb.tgovcloud.com/epidemicbg/lbsFlow/chart','PFlow')
 
 
