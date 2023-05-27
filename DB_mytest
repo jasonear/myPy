@@ -1,0 +1,23 @@
+from sqlalchemy import String,text,DateTime,Column,ForeignKey,Integer,Boolean,create_engine
+# from sqlalchemy import ForeignKey
+# from sqlalchemy import Integer
+# from sqlalchemy import String
+# from sqlalchemy import Boolean
+# from sqlalchemy import DateTime
+# from sqlalchemy import text
+# from sqlalchemy import create_engine
+from sqlalchemy.orm import declarative_base,relationship,sessionmaker,Session
+# from sqlalchemy.orm import relationship
+# from sqlalchemy.orm import sessionmaker
+# from sqlalchemy.orm import Session
+from urllib.parse import quote
+
+
+sqlserver_conn_url = 'mssql+pyodbc://sa:'+'%s@'%quote('wpdi@2017') + '192.168.0.176:1433/GisData?driver=ODBC Driver 17 for SQL Server'
+sqlserver_engine = create_engine(sqlserver_conn_url)
+
+maps_sql = text(f'select * from maps')
+with Session(sqlserver_engine) as session:
+    _maps = session.execute(maps_sql).all()
+    # print(_maps[len(_maps)-1])
+    print(_maps[-1])
