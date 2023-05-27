@@ -16,7 +16,6 @@ while myrow:
 
 conn.close()
 
-
 # 写入数据
 # cursor.execute("insert into dbo.test ([NO.],Name,Address) values ('003','张三','郑州') ")
 # conn.commit()

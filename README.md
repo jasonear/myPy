@@ -1,3 +1,35 @@
 # myPy
-my Python Programma Test
-2021 test
+1、my Python Programma Test
+
+2、2021 test
+
+3、2022 test  
+这是换行的方式。
+
+4、__这是加粗语法__, **这也是加粗的语法**
+
+>这是引用
+>
+>引用的内容及段落
+
+## 列表
+1. 数字加英文句号
+2. 第二列
+3. 第三列
+
+## 分割线
+***
+---
+
+## 代码
+
+`node` 要将单词或短语表示为代码
+
+     <html>
+       <body>
+       </body>
+     </html>
+
+
+
+
