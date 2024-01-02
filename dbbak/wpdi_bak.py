@@ -4,8 +4,10 @@
 import os
 import shutil
 
+#复制文件到指定目录
 os.system("xcopy I:\\bak\\wpdiweb202306.bak D:\\ZZZ\\000")
 # os.system("xcopy I:\\bak\\wpdiweb202306.bak \\\192.168.0.80\\wpdi3\\czg\\sw\\")  #无法复制到网络盘上
 
+#复制文件到指定目录
 shutil.copyfile('I:\\bak\\wpdiweb202306.bak', 'D:\\ZZZ\\000\\test.bak')
 # shutil.copyfile('I:\\bak\\wpdiweb202306.bak', '\\\192.168.0.80\\wpdi3\\czg\\sw\\test.bak')  #无法复制到网络盘上
