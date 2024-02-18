@@ -20,7 +20,7 @@ try :
                 "touser": "134",
                 "agentid": 0,
                 'msgtype' : 'text',
-                'climsgid' : 'climsgidclimsgid_%f' % (random.random()),
+                # 'climsgid' : 'climsgidclimsgid_%f' % (random.random()),
                 'text' : {
                     'content':'方法论',
                 },

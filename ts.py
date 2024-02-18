@@ -9,4 +9,4 @@ print('响应状态：', response.status_code)
 # 打印响应头
 print('响应头：', response.headers)
 # 打印响应内容
-print('响应内容：', response.text)
+# print('响应内容：', response.text)
